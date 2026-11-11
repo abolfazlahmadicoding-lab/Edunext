@@ -736,3 +736,32 @@ body,
         grid-template-columns: repeat(2, 1fr)
     }
 }
+
+/* منوی موبایل */
+.menu-toggle {
+    display: none
+}
+
+@media(max-width:850px) {
+    .menu-toggle {
+        display: inline-block
+    }
+
+    .header nav {
+        display: none
+    }
+
+    .header nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding-bottom: 12px
+    }
+
+    .header nav.open a {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0
+    }
+}

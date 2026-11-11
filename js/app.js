@@ -33,3 +33,19 @@ const observer = new IntersectionObserver(function(entries){
 scrollItems.forEach(item => {
     observer.observe(item)
 });
+
+
+// منوی موبایل
+const menuButtonMobile = document.querySelector("[data-menu-toggle]");
+const navMobile = document.querySelector("[data-nav]");
+
+menuButtonMobile.addEventListener("click" , function(){
+    navMobile.classList.toggle("open");
+    if(navMobile.classList.contains("open")){
+        menuButtonMobile.textContent = "✕";
+        menuButtonMobile.setAttribute("aria-expanded", "true");
+    } else{
+        menuButtonMobile.textContent = "☰";
+        menuButtonMobile.setAttribute("aria-expanded", "false");
+    }
+});
