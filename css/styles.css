@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("../font/Vazirmatn[wght].woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 :root {
     --bg: #fcfbff;
@@ -764,4 +769,21 @@ body,
         font-size: 14px;
         padding: 10px 0
     }
+}
+
+/* رنگ کاور بر اساس دسته */
+.cover.programming {
+    background: linear-gradient(130deg, #092e4d, #167fa3)
+}
+
+.cover.web {
+    background: linear-gradient(130deg, #17192b, #51456f)
+}
+
+.cover.tools {
+    background: linear-gradient(130deg, #17182f, #9a6a53)
+}
+
+.cover.fundamentals {
+    background: linear-gradient(130deg, #21143e, #7860b9)
 }
