@@ -62,17 +62,6 @@ const courses = [
     { id: 6, title: "مبانی کامپیوتر", category: "fundamentals", hours: 6, rating: 3.7, level: "beginner", badge: "PC" }
 ];
 
-// const list = document.querySelector("[data-courses-list]");
-
-// if(list){
-//     courses.forEach(course =>{
-//         list.innerHTML += `<a class="course" href="courses.html">
-//         <div class="cover ${course.category}"><strong>${course.badge}</strong><span>▶</span></div>
-//         <div class="info"><b>${course.title}</b><small>${course.hours} ساعت ◷ <span>${course.rating} <i>★</i></span></small></div>
-//         </a>`
-//     })
-// };
-
 //تبدیل کد داده ی دوره ها به تابع
 function renderCourses(items) {
     const list = document.querySelector("[data-courses-list]");
@@ -92,13 +81,21 @@ renderCourses(courses);
 
 
 // جست و جوی دوره ها
+let activeCategory = "all";
+function applyFilters(){
+    const text = searchInput.value.trim().toLowerCase();
+    const result = courses.filter(course => {
+    const matchesCategory = activeCategory === "all" || activeCategory === course.category;
+    const matchesText = course.title.toLowerCase().includes(text);
+    return matchesCategory && matchesText;
+})
+    renderCourses(result)
+};
+
 const searchInput = document.querySelector("[data-course-search]");
 if(searchInput){
 searchInput.addEventListener("input" , function(){
-    const text = searchInput.value.trim().toLowerCase();
-    const result = courses.filter(course => course.title.toLowerCase().includes(text));
-
-    renderCourses(result);
+    applyFilters()
 })
 };
 
@@ -106,10 +103,11 @@ searchInput.addEventListener("input" , function(){
 const filterButtons = document.querySelectorAll("[data-filter]");
 filterButtons.forEach(filterButton => {
     filterButton.addEventListener("click" , function(){
-        console.log(filterButton.dataset.filter);
         filterButtons.forEach(button => {
             button.classList.remove("active");
         })
         filterButton.classList.add("active");
+        activeCategory = filterButton.dataset.filter;
+        applyFilters()
     })
 });
