@@ -101,3 +101,15 @@ searchInput.addEventListener("input" , function(){
     renderCourses(result);
 })
 };
+
+//  فیلتر دسته بندی ها
+const filterButtons = document.querySelectorAll("[data-filter]");
+filterButtons.forEach(filterButton => {
+    filterButton.addEventListener("click" , function(){
+        console.log(filterButton.dataset.filter);
+        filterButtons.forEach(button => {
+            button.classList.remove("active");
+        })
+        filterButton.classList.add("active");
+    })
+});

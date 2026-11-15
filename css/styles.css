@@ -805,3 +805,31 @@ body,
 .search:focus {
     border-color: var(--purple)
 }
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px
+}
+
+.chip-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.chip-btn:hover {
+    border-color: var(--purple)
+}
+
+.chip-btn.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: white
+}
