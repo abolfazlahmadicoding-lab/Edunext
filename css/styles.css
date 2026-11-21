@@ -841,3 +841,25 @@ body,
     color: var(--muted);
     font-size: 15px
 }
+
+.newsletter {
+    flex-wrap: wrap
+}
+
+.form-message {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 13px
+}
+
+.form-message:empty {
+    display: none
+}
+
+.form-message.error {
+    color: #ff8a9b
+}
+
+.form-message.success {
+    color: #7be0a5
+}

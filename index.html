@@ -101,7 +101,8 @@
         </section>
         <section class="newsletter wrap"><b>✉</b><strong>با عضویت در خبرنامه، از تخفیف‌ها و دوره‌های جدید باخبر
                 شو!</strong>
-            <form><input type="email" placeholder="ایمیل خود را وارد کنید..."><button>عضویت در خبرنامه</button></form>
+            <form data-newsletter novalidate><input type="email" name="email" data-newsletter-email placeholder="ایمیل خود را وارد کنید..." aria-label="ایمیل"><button type="submit">عضویت در خبرنامه</button></form>
+            <p class="form-message" data-newsletter-message aria-live="polite"></p>
         </section>
     </main>
     <footer>

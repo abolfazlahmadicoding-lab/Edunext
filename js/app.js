@@ -115,3 +115,24 @@ filterButtons.forEach(filterButton => {
         applyFilters()
     })
 });
+
+//فرم خبرنامه
+const newsletterForm = document.querySelector("[data-newsletter]");
+if(newsletterForm){
+newsletterForm.addEventListener("submit" , function(event){
+    event.preventDefault();
+    const emailInput = document.querySelector("[data-newsletter-email]");
+    const email = emailInput.value.trim();
+    const message = document.querySelector("[data-newsletter-message]");
+    if(email === "" || !email.includes("@") || !email.includes(".")){
+        message.textContent = "ایمیل معتبر نیست";
+        message.classList.add("error");
+        message.classList.remove("success");
+    } else{
+        message.classList.remove("error");
+        message.classList.add("success");
+        message.textContent = "عضویت شما با موفقیت ثبت شد";
+        emailInput.value = "";
+    }
+})
+};
