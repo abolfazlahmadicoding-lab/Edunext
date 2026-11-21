@@ -67,6 +67,10 @@ function renderCourses(items) {
     const list = document.querySelector("[data-courses-list]");
 
     if (list) {
+    if(items.length === 0){
+        list.innerHTML = `<p class="empty-message">دوره‌ای پیدا نشد</p>`;
+        return;
+    }
         list.innerHTML = "";
         items.forEach(item => {
             list.innerHTML += `<a class="course" href="courses.html">
