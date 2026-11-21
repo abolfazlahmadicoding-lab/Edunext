@@ -71,7 +71,7 @@ function renderCourses(items) {
         items.forEach(item => {
             list.innerHTML += `<a class="course" href="courses.html">
         <div class="cover ${item.category}"><strong>${item.badge}</strong><span>▶</span></div>
-        <div class="info"><b>${item.title}</b><small>${item.hours} ساعت ◷ <span>${item.rating} <i>★</i></span></small></div>
+        <div class="info"><b>${item.title}</b><small>${item.hours} ساعت ◷ <span>${item.rating.toFixed(1)} <i>★</i></span></small></div>
         </a>`
         })
     }
@@ -89,7 +89,7 @@ function applyFilters(){
     const matchesText = course.title.toLowerCase().includes(text);
     return matchesCategory && matchesText;
 })
-    renderCourses(result)
+    renderCourses(result);
 };
 
 const searchInput = document.querySelector("[data-course-search]");
