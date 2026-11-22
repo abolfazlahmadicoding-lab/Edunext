@@ -1180,3 +1180,23 @@ main {
         transform: translateY(12px)
     }
 }
+/* آیکون شب و روز */
+.icon .ico-sun {
+    display: none
+}
+
+.dark .icon .ico-moon {
+    display: none
+}
+
+.dark .icon .ico-sun {
+    display: inline
+}
+
+[data-theme-toggle] .ico {
+    transition: transform .4s
+}
+
+[data-theme-toggle]:hover .ico {
+    transform: rotate(20deg)
+}
