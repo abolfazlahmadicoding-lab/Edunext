@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>EduNext | آینده‌ات رو بساز</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/app.js" defer></script>
@@ -11,47 +12,58 @@
 
 <body>
     <header class="header">
-        <a class="logo" href="index.html"><b>✦</b> Edu<span>Next</span></a>
+        <a class="logo" href="index.html"><svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#6938ed"/><path d="M16 8 6 13l10 5 10-5-10-5Z" fill="#fff"/><path d="M10 16.5v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4l-6 3-6-3Z" fill="#fff" opacity=".85"/></svg><strong class="logo-text">Edu<span>Next</span></strong></a>
         <nav data-nav><a class="active" href="index.html">صفحه اصلی</a><a href="courses.html">دوره‌ها</a><a
                 href="about.html">استادها</a><a href="about.html">درباره ما</a><a href="about.html">تماس با ما</a></nav>
-        <div class="tools"><button class="icon" aria-label="جست‌وجو">⌕</button><button class="icon" data-theme-toggle
-                aria-label="تغییر حالت شب و روز">☾</button><a class="btn small" href="auth.html">ورود / ثبت‌نام ♙</a>
+        <div class="tools"><button class="icon" aria-label="جست‌وجو"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><button class="icon" data-theme-toggle
+                aria-label="تغییر حالت شب و روز">☾</button><a class="btn small" href="auth.html">ورود / ثبت‌نام <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></a>
             <button class="icon menu-toggle" data-menu-toggle aria-label="باز و بسته کردن منو"
                 aria-expanded="false">☰</button>
         </div>
     </header>
     <main>
         <section class="hero wrap">
-            <div class="art" aria-label="تصویرسازی دانشجو در حال یادگیری">
+            <div class="art" aria-label="تصویرسازی لپ‌تاپ و دوره‌ی آنلاین">
                 <div class="blob"></div>
-                <div class="person">
-                    <div class="hair"></div>
-                    <div class="face"></div>
-                    <div class="hoodie"></div>
-                    <div class="laptop">EduNext<br><b>▶</b></div>
-                </div>
+                <svg class="hero-svg" viewBox="0 0 420 320" aria-hidden="true">
+                    <rect x="60" y="40" width="300" height="190" rx="18" fill="#6938ed"/>
+                    <rect x="76" y="56" width="268" height="158" rx="10" fill="#17142d"/>
+                    <circle cx="92" cy="72" r="4" fill="#ff8a9b"/><circle cx="106" cy="72" r="4" fill="#ffcf5c"/><circle cx="120" cy="72" r="4" fill="#7be0a5"/>
+                    <rect x="92" y="92" width="120" height="10" rx="5" fill="#a77aff"/>
+                    <rect x="92" y="112" width="90" height="8" rx="4" fill="#fff" opacity=".35"/>
+                    <rect x="92" y="130" width="140" height="8" rx="4" fill="#fff" opacity=".35"/>
+                    <rect x="92" y="148" width="104" height="8" rx="4" fill="#fff" opacity=".35"/>
+                    <rect x="92" y="166" width="126" height="8" rx="4" fill="#fff" opacity=".2"/>
+                    <rect x="248" y="92" width="82" height="96" rx="12" fill="#6938ed"/>
+                    <circle cx="289" cy="128" r="20" fill="#fff"/><path d="M283 118v20l18-10z" fill="#6938ed"/>
+                    <rect x="260" y="160" width="58" height="8" rx="4" fill="#fff" opacity=".6"/>
+                    <rect x="260" y="174" width="38" height="8" rx="4" fill="#fff" opacity=".35"/>
+                    <path d="M30 236h360l-24 34H54z" fill="#c9c8d8"/><rect x="150" y="236" width="120" height="8" rx="4" fill="#9d9bb4"/>
+                    <rect x="322" y="196" width="88" height="58" rx="12" fill="#fff"/>
+                    <rect x="334" y="210" width="52" height="8" rx="4" fill="#6938ed"/><rect x="334" y="226" width="64" height="8" rx="4" fill="#e7dcff"/>
+                </svg>
                 <div class="chip rating"><b>+۸۵٪</b><small>رضایت دانشجویان</small></div>
-                <div class="chip play">▷</div>
-                <div class="chip cap">♧</div>
+                <div class="chip play"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+                <div class="chip cap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></div>
             </div>
             <div class="hero-copy" data-reveal><label>● یادگیری؛ بدون محدودیت</label>
                 <h1>آینده‌ات رو بساز...<br>با آموزش <em>آنلاین</em>!</h1>
                 <p>دسترسی به بهترین دوره‌های آموزشی، از هر کجا و در هر زمان؛ با کیفیت بالا و پشتیبانی حرفه‌ای.</p>
                 <div class="actions"><a class="btn" href="courses.html">مشاهده دوره‌ها ▷</a><a class="btn outline"
-                        href="about.html">بیشتر بدانید ↓</a></div>
+                        href="#benefits">بیشتر بدانید ↓</a></div>
             </div>
         </section>
-        <section class="benefits wrap">
-            <article><i>♧</i>
+        <section class="benefits wrap" id="benefits">
+            <article><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="2"/><rect x="17" y="14" width="4" height="6" rx="2"/></svg></i>
                 <div><b>پشتیبانی ۲۴/۷</b><small>همیشه در کنار شما</small></div>
             </article>
-            <article><i>♙</i>
+            <article><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></i>
                 <div><b>مدرک معتبر</b><small>با قابلیت استعلام</small></div>
             </article>
-            <article><i>ϟ</i>
+            <article><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></i>
                 <div><b>یادگیری تعاملی</b><small>با تجربه‌ای متفاوت</small></div>
             </article>
-            <article><i>▣</i>
+            <article><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></i>
                 <div><b>دسترسی در همه دستگاه‌ها</b><small>موبایل، تبلت و دسکتاپ</small></div>
             </article>
         </section>
@@ -89,7 +101,7 @@
                 <p>دوره‌های پیشرفته ما، تو رو برای ورود به بازار کار آماده می‌کنن.</p><a class="btn white"
                     href="courses.html">مشاهده دوره‌های تخصصی ←</a>
             </div>
-            <div class="promo-art">🎓<b>▶</b></div>
+            <div class="promo-art" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg></div>
         </section>
         <section class="reviews wrap" data-reveal><label>● نظرات دانشجویان</label>
             <h2>آنچه دانشجویان ما می‌گویند</h2>
@@ -99,7 +111,7 @@
                 <article>«پشتیبانی عالی و محتوای باکیفیت.»<b>رضا کریمی　★★★★★</b></article>
             </div>
         </section>
-        <section class="newsletter wrap"><b>✉</b><strong>با عضویت در خبرنامه، از تخفیف‌ها و دوره‌های جدید باخبر
+        <section class="newsletter wrap"><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 8 8 5 8-5"/></svg></b><strong>با عضویت در خبرنامه، از تخفیف‌ها و دوره‌های جدید باخبر
                 شو!</strong>
             <form data-newsletter novalidate><input type="email" name="email" data-newsletter-email placeholder="ایمیل خود را وارد کنید..." aria-label="ایمیل"><button type="submit">عضویت در خبرنامه</button></form>
             <p class="form-message" data-newsletter-message aria-live="polite"></p>
@@ -107,7 +119,7 @@
     </main>
     <footer>
         <div class="footer wrap">
-            <div><a class="logo" href="index.html">✦ Edu<span>Next</span></a>
+            <div><a class="logo" href="index.html"><svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#6938ed"/><path d="M16 8 6 13l10 5 10-5-10-5Z" fill="#fff"/><path d="M10 16.5v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4l-6 3-6-3Z" fill="#fff" opacity=".85"/></svg><strong class="logo-text">Edu<span>Next</span></strong></a>
                 <p>آموزش، مسیر موفقیت</p>
             </div>
             <div><b>لینک‌های سریع</b><a href="index.html">صفحه اصلی</a><a href="courses.html">دوره‌ها</a><a
@@ -115,7 +127,7 @@
             <div><b>خدمات ما</b><a href="about.html">پشتیبانی</a><a href="about.html">راهنمای خرید</a><a
                     href="about.html">سوالات متداول</a></div>
             <div><b>با ما در ارتباط باشید</b>
-                <p>◉　◎　▶　in</p>
+                <div class="social"><span class="social-icon" role="img" aria-label="اینستاگرام"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span class="social-icon" role="img" aria-label="یوتیوب"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></span><span class="social-icon" role="img" aria-label="لینکدین">in</span></div>
             </div><small>© ۲۰۲۶ EduNext - تمامی حقوق محفوظ است.</small>
         </div>
     </footer>
