@@ -67,16 +67,28 @@ function renderCourses(items) {
     const list = document.querySelector("[data-courses-list]");
 
     if (list) {
-    if(items.length === 0){
-        list.innerHTML = `<p class="empty-message">دوره‌ای پیدا نشد</p>`;
-        return;
-    }
+        if (items.length === 0) {
+            list.innerHTML = `<p class="empty-message">دوره‌ای پیدا نشد</p>`;
+            return;
+        }
         list.innerHTML = "";
         items.forEach(item => {
-            list.innerHTML += `<a class="course" href="courses.html">
-        <div class="cover ${item.category}"><strong>${item.badge}</strong><span>▶</span></div>
-        <div class="info"><b>${item.title}</b><small>${item.hours} ساعت ◷ <span>${item.rating.toFixed(1)} <i>★</i></span></small></div>
-        </a>`
+            list.innerHTML += `<article class="course">
+    <div class="cover ${item.category}">
+        <span class="level">${item.level}</span>
+        <button class="fav" type="button" data-id="${item.id}" aria-label="افزودن به علاقه‌مندی‌ها"><svg class="ico"><use href="#i-heart"/></svg></button>
+        <strong>${item.badge}</strong>
+        <span class="play-btn" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span>
+    </div>
+    <div class="info">
+        <h3><a href="courses.html">${item.title}</a></h3>
+        <div class="meta">
+            <span><svg class="ico"><use href="#i-clock"/></svg> ${item.hours} ساعت</span>
+            <span class="rate"><svg class="ico"><use href="#i-star"/></svg> ${item.rating.toFixed(1)}</span>
+        </div>
+        <span class="more">مشاهده دوره <svg class="ico"><use href="#i-arrow"/></svg></span>
+    </div>
+</article>`
         })
     }
 };
@@ -86,27 +98,27 @@ renderCourses(courses);
 
 // جست و جوی دوره ها
 let activeCategory = "all";
-function applyFilters(){
+function applyFilters() {
     const text = searchInput.value.trim().toLowerCase();
     const result = courses.filter(course => {
-    const matchesCategory = activeCategory === "all" || activeCategory === course.category;
-    const matchesText = course.title.toLowerCase().includes(text);
-    return matchesCategory && matchesText;
-})
+        const matchesCategory = activeCategory === "all" || activeCategory === course.category;
+        const matchesText = course.title.toLowerCase().includes(text);
+        return matchesCategory && matchesText;
+    })
     renderCourses(result);
 };
 
 const searchInput = document.querySelector("[data-course-search]");
-if(searchInput){
-searchInput.addEventListener("input" , function(){
-    applyFilters()
-})
+if (searchInput) {
+    searchInput.addEventListener("input", function () {
+        applyFilters()
+    })
 };
 
 //  فیلتر دسته بندی ها
 const filterButtons = document.querySelectorAll("[data-filter]");
 filterButtons.forEach(filterButton => {
-    filterButton.addEventListener("click" , function(){
+    filterButton.addEventListener("click", function () {
         filterButtons.forEach(button => {
             button.classList.remove("active");
         })
@@ -118,21 +130,21 @@ filterButtons.forEach(filterButton => {
 
 //فرم خبرنامه
 const newsletterForm = document.querySelector("[data-newsletter]");
-if(newsletterForm){
-newsletterForm.addEventListener("submit" , function(event){
-    event.preventDefault();
-    const emailInput = document.querySelector("[data-newsletter-email]");
-    const email = emailInput.value.trim();
-    const message = document.querySelector("[data-newsletter-message]");
-    if(email === "" || !email.includes("@") || !email.includes(".")){
-        message.textContent = "ایمیل معتبر نیست";
-        message.classList.add("error");
-        message.classList.remove("success");
-    } else{
-        message.classList.remove("error");
-        message.classList.add("success");
-        message.textContent = "عضویت شما با موفقیت ثبت شد";
-        emailInput.value = "";
-    }
-})
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const emailInput = document.querySelector("[data-newsletter-email]");
+        const email = emailInput.value.trim();
+        const message = document.querySelector("[data-newsletter-message]");
+        if (email === "" || !email.includes("@") || !email.includes(".")) {
+            message.textContent = "ایمیل معتبر نیست";
+            message.classList.add("error");
+            message.classList.remove("success");
+        } else {
+            message.classList.remove("error");
+            message.classList.add("success");
+            message.textContent = "عضویت شما با موفقیت ثبت شد";
+            emailInput.value = "";
+        }
+    })
 };
