@@ -68,11 +68,12 @@ function renderCourses(items) {
             list.innerHTML = `<p class="empty-message">دوره‌ای پیدا نشد</p>`;
             return;
         }
+        const limit = Number(list.dataset.limit) || items.length;
         list.innerHTML = "";
-        items.forEach(item => {
+        items.slice(0, limit).forEach(item => {
             list.innerHTML += `<article class="course">
     <div class="cover ${item.category}">
-        <span class="level">${item.level}</span>
+        <span class="level">${item.level === "beginner" ? "مقدماتی" : "پیشرفته"}</span>
         <button class="fav" type="button" data-id="${item.id}" aria-label="افزودن به علاقه‌مندی‌ها"><svg class="ico"><use href="#i-heart"/></svg></button>
         <strong>${item.badge}</strong>
         <span class="play-btn" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span>
