@@ -1,14 +1,9 @@
 // حالت شب و روز
 const button = document.querySelector("[data-theme-toggle]");
 
-const savedButton = localStorage.getItem("theme");
-if (savedButton === "dark") {
-    document.body.classList.add(savedButton);
-}
-
 button.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
+    document.documentElement.classList.toggle("dark");
+    if (document.documentElement.classList.contains("dark")) {
         localStorage.setItem("theme", "dark")
     } else {
         localStorage.setItem("theme", "light")
